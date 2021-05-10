@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css" crossorigin="anonymous">
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+  </head>
+  <body style="text-align: center">
+      <div class="container">
+          <h3>Word Clouds</h3>
+          <div class='row' id="filter">
+            <div class='col-3'></div>
+            <div class='col-3'>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" id="file_names" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Choose File
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li v-for="f in files" class="dropdown-item" :id="f" onclick="ckChange(this)">{{ f }}</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class='col-3'>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" id="topics" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Topics
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li v-for="t in topics" class="dropdown-item" :id="t" onclick="ckChange(this)">{{ t }}</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class='col-3'></div>
+          </div>
+
+        <div class='row'>
+            <div class=col-4></div>
+            <div class='col-4'>
+                <button class="btn btn-success" type="button" onclick="generateGraph()">Generate WordCloud</button>
+            </div>
+        </div>
+        <div class='row'>
+            <div class=col-4></div>
+            <div class='col-4'>
+                <button class="btn btn-info" type="button" onclick="returnHome()">Upload more Files</button>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+          <div id="cloud"></div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <script src="visual.js"></script>
+  </body>
+</html>
