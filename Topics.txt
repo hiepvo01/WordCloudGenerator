@@ -1,2 +1,2 @@
-cheese 118
-cake 25
+cheese 85
+cake 36

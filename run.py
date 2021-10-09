@@ -1,6 +1,5 @@
-import imghdr
 import os
-from flask import Flask, render_template, request, redirect, url_for, abort, send_from_directory, jsonify
+from flask import Flask, request, redirect, url_for, abort, send_from_directory, jsonify
 from werkzeug.utils import secure_filename
 from flask_cors import CORS
 from model import *

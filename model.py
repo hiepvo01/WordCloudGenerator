@@ -83,6 +83,6 @@ def getTopics(n, dataFiles):
     return topics
 
 
-# print(tfidf_Calculator(['file1.txt', 'file2.txt']))
+# print(tfidf_Calculator(['cheese.txt', 'cupcake.txt']))
 # print(read_StopWords())
-# print(getTopics(2, ['file1.txt', 'file2.txt']))
+# print(getTopics(2, ['cheese.txt', 'cupcake.txt']))
