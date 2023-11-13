@@ -32,18 +32,20 @@ var startUpload = function(file) {
 function formSubmit(){
     if(files.length > 0) {
         for(file of files) {
+            console.log(file)
             let xhr = new XMLHttpRequest();
             let formData = new FormData();
             formData.set('file', file)
             xhr.open("POST", 'https://worldcloud-77ba.onrender.com/', true);
             xhr.send(formData);
-            if (localStorage.getItem('files')){
-                for (d in formData) {
-                    localStorage.getItem('files').push(d)
-                }
-            } else {
-                localStorage.setItem('files', formData)
-            }
+            // if (localStorage.getItem('files')){
+            //     for (d in formData) {
+            //         console.log(d)
+            //         localStorage.getItem('files').push(d)
+            //     }
+            // } else {
+            //     localStorage.setItem('files', formData)
+            // }
         }
         alert("Data Files have been uploaded to server")
     } else {
