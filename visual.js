@@ -76,7 +76,7 @@ function generateGraph(){
             }
         };
         if (file.innerText != "All.txt") {
-            xhr.open("POST", 'http://127.0.0.1:5000/words', false);
+            xhr.open("POST", 'https://worldcloud-77ba.onrender.com/words', false);
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.send(JSON.stringify({
                 files: file.innerText,
@@ -107,7 +107,7 @@ function generateGraph(){
 }
 
 window.onload = async function () {
-    ref = await fetch('http://127.0.0.1:5000/').then(response => response.json())
+    ref = await fetch('https://worldcloud-77ba.onrender.com/').then(response => response.json())
     filter.files = ref.message
     filter.files.push("All.txt")
 }

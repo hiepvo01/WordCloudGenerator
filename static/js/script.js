@@ -35,7 +35,7 @@ function formSubmit(){
             let xhr = new XMLHttpRequest();
             let formData = new FormData();
             formData.set('file', file)
-            xhr.open("POST", 'http://127.0.0.1:5000/', true);
+            xhr.open("POST", 'https://worldcloud-77ba.onrender.com/', true);
             xhr.send(formData);
             if (localStorage.getItem('files')){
                 for (d in formData) {
@@ -53,7 +53,7 @@ function formSubmit(){
 }
 
 async function clearData(){
-    await fetch("http://127.0.0.1:5000/clear").then(response => response.json())
+    await fetch("https://worldcloud-77ba.onrender.com/clear").then(response => response.json())
     alert("Data is cleared")
 }
 
